@@ -21,6 +21,7 @@ type ServiceOptions func(*boyoService)
 
 func NewBoyoService(name string, vip *viper.Viper, opts ...ServiceOptions) *boyoService {
 	b := &boyoService{}
+	b.vip = vip
 
 	if len(opts) > 0 {
 		for _, opt := range opts {
