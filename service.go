@@ -76,6 +76,11 @@ func (s *boyoService) GetDB() *sqlx.DB {
 	return s.db
 }
 
+func (s *boyoService) GetRouter() *echo.Echo {
+
+	return s.e
+}
+
 func (s *boyoService) connectDB() error {
 
 	fmt.Println(s.connStr)
