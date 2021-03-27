@@ -77,6 +77,7 @@ func (s *boyoService) GetDB() *sqlx.DB {
 
 func (s *boyoService) connectDB() error {
 
+	fmt.Println(s.connStr)
 	if s.connStr != "" {
 		db, err := sqlx.Open("postgres", s.connStr)
 		if err != nil {
